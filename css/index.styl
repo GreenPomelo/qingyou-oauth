@@ -1,0 +1,491 @@
+*
+  margin 0
+  padding 0
+a
+  text-decoration none
+  color #fff
+body
+  height 100%
+  width 100vw
+  background #fff
+  color #333
+  font-family AvertaStd, Helvetica Neue, Helvetica, Arial, sans-serif
+  -webkit-font-smoothing antialiased
+  -webkit-user-select none
+  -moz-user-select none
+  -ms-user-select none
+  user-select none
+  nav
+    position fixed
+    top 0
+    left 0
+    right 0
+    display flex
+    flex-direction row
+    align-items center
+    flex-wrap wrap
+    justify-content space-between
+    padding 1.4rem 0
+    z-index 1000
+    background transparent
+    font-weight 700
+    transition all 0.2s ease-in-out 0s
+    .qingyou-header
+      display flex
+      flex-direction row
+      align-items center
+      cursor pointer
+      margin-left 14%
+      .header-logo
+        img
+          height 3rem
+          margin 0 1.2rem
+      span
+        color #406439
+        font-size 1.2rem
+    .header-about
+      display flex
+      flex-direction row
+      align-items center
+      position relative
+      white-space nowrap
+      margin-right 14%
+      a
+        color #ff9247
+        font-weight 600
+        cursor pointer
+        word-wrap none
+      a:hover
+        color #ffc47d
+  .qingyou-banner
+    height 100vh
+    padding-top 22vh
+    box-sizing border-box
+    display flex
+    justify-content center
+    margin-bottom 10vh
+    overflow hidden
+    .banner-pic
+      .square
+        position absolute
+        top 18vh
+        right 24vw
+        width 3rem
+        height 3rem
+        background #fadd7f
+        animation rotate1 3s linear infinite
+      .triangle1
+        position absolute
+        top 38vh
+        left 22vw
+        width 0
+        height 0
+        border-bottom 3.5rem solid #b5d262
+        border-left 2rem solid transparent
+        border-right 2rem solid transparent
+        animation rotate2 5s linear infinite
+      .triangle1:after
+        content ' '
+        position absolute
+        top 1rem
+        left -1.2rem
+        right 1.2rem
+        width 0
+        height 0
+        border-bottom 2rem solid #faf8f5
+        border-left 1.2rem solid transparent
+        border-right 1.2rem solid transparent
+      .triangle2
+        position absolute
+        top 50vh
+        right 10vw
+        width 7rem
+        height 7rem
+        width 0
+        height 0
+        border-bottom 6.9rem solid #a2cf5a
+        border-left 4rem solid transparent
+        border-right 4rem solid transparent
+        animation rotate1 10s linear infinite
+    .banner-title
+      display flex
+      flex-direction column
+      justify-content center
+      align-items center
+      position absolute
+      z-index 1
+      white-space nowrap
+      color #000
+      span
+        font-weight 800
+        font-size 3.4rem
+      p
+        color #878787
+        font-size 1.2rem
+        line-height 4rem
+    .wave
+      width 100vw
+      overflow hidden
+      position relative
+      img
+        width 200vw
+        position absolute
+        left 100vw
+        bottom 0
+      .wave-left
+        animation-delay -0.8s
+        animation wave-move 3s linear infinite
+      .wave-middle
+        opacity 0.45
+        animation-delay -1.6s
+        animation wave-move 6s linear infinite
+      .wave-right
+        opacity 0.5
+        animation-delay -2.4s
+        animation wave-move 12s linear infinite
+  .qingyou-content
+    .qingyou-item
+      display flex
+      flex-direction column
+      align-items center
+      padding 10vh
+      .qingyou-text
+        text-align center
+        font-size 1.2rem
+        margin-top 80px
+        width 70%
+      .qingyou-text-detail
+        color #878787
+        font-size 1rem
+        width 70%
+        margin-bottom 50px
+      .qingyou-card-container
+        display flex
+        width 100%
+        justify-content space-between
+        .qingyou-sourcecard
+          margin-top 80px
+          display inline-block
+          width 20vw
+          height 40vh
+          box-shadow 0 1px 2px 1px #efe8e1
+          transition all 0.2s ease-in-out 0s
+          box-sizing border-box
+          .card-header
+            height 35%
+            width 100%
+            background #cee48e
+            display flex
+            align-items center
+            justify-content center
+            .card-text
+              font-size 1.6rem
+              text-align center
+              position relative
+              img
+                position absolute
+                top -0.8rem
+                right -1.4rem
+                opacity 0
+                transition all 0.2s ease-in-out 0s
+          .card-content
+            display flex
+            align-items center
+            justify-content center
+            height 65%
+            position relative
+            .card-logo-container
+              border-radius 100%
+              height 6rem
+              width 6rem
+              overflow hidden
+              img
+                height 6rem
+                width 6rem
+            .card-mask
+              opacity 0
+              position absolute
+              top 0
+              right 0
+              bottom 0
+              left 0
+              background transparent
+              padding 0 3rem
+              overflow scroll
+              display flex
+              align-items center
+              span
+                font-size 1.2rem
+                text-align justify
+        .qingyou-sourcecard:hover
+          transition all 0.2s ease-in-out 0s
+          box-shadow 0 1px 4px 1px #c8d899
+          color #000
+          .card-text
+            img
+              opacity 1
+              transition all 0.2s ease-in-out 0s
+          .card-mask
+            opacity 1
+            transition all 0.2s ease-in-out 0s
+            background rgba(206, 228, 142, 0.1)
+          .card-logo-container
+            img
+              opacity 0.1
+      .qingyou-guide
+        position relative
+        width 100%
+        height 60vh
+        display flex
+        justify-content center
+        margin-top 80px
+        .guide-label-container
+          position absolute
+          top 0
+          height 2.6rem
+          width 70%
+          .guide-label
+            color #fff
+            text-align center
+            position absolute
+            bottom -0.8rem
+            height 0
+            width 3.4rem
+            border-width 0 1.2rem 2.6rem 1.2rem
+            border-style none solid solid
+            transition all 0.2s ease-in-out 0s
+            font-weight 800
+            line-height 2rem
+            cursor pointer
+          .guide-label00
+            border-color transparent transparent #FF8155
+            left 2rem
+          .guide-label01
+            border-color transparent transparent #FFC919
+            left 7rem
+          .guide-label02
+            border-color transparent transparent #B3DE61
+            left 12rem
+          .guide-label03
+            border-color transparent transparent #6EE4D7
+            left 17rem
+          .guide-label04
+            border-color transparent transparent #78C5EF
+            left 22rem
+          .guide-label05
+            border-color transparent transparent #AC72FF
+            left 27rem
+          .guide-label06
+            border-color transparent transparent #E970E6
+            left 32rem
+        .guide-content-container
+          height calc(100% - 2.6rem)
+          width 70%
+          background #faf8f5
+          position absolute
+          top 2.6rem
+          overflow scroll
+          padding 4rem
+          box-sizing border-box
+          user-select text
+          box-shadow 0 1px 2px 1px #efe8e1
+          border-radius 8px
+          div
+            font-size 1.4rem
+          span
+            font-size 1.2rem
+            color #406439
+          img
+            width 100%
+      .qingyou-img-container
+        display flex
+        align-items center
+        margin-top 80px
+        .img-arrow
+          width 4rem
+          margin 0 6rem
+        .img-cut
+          display inline-block
+          margin 0 auto
+          height 65vh
+          border-radius 8px
+          box-shadow 0 1px 2px 1px #efe8e1
+          transition all 0.2s ease-in-out 0s
+        .img-cut:hover
+          box-shadow 0 1px 4px 4px #efe8e1
+          transition all 0.2s ease-in-out 0s
+          transform translate(-0.2rem, -0.2rem)
+    .qingyou-source
+      flex-direction row
+      align-items flex-start
+      justify-content space-between
+      background #faf8f5
+      .qingyou-para
+        width 14rem
+        text-align justify
+        font-size 1.2rem
+        p
+          color #878787
+          font-size 1rem
+        img
+          height 3rem
+          width 3rem
+      .qingyou-subtitle
+        p
+          text-align left
+          margin-bottom 2rem
+      pre
+        height 40vh
+        width 50%
+        overflow scroll
+        box-shadow 0 1px 2px 1px #efe8e1
+        border-radius 8px
+.qingyou-line
+  height 1px
+  width 80%
+  background #efe8e1
+  opacity 0.8
+  margin 0 auto
+.qingyou-subtitle
+  span
+    font-size 2rem
+  p
+    text-align center
+    color #ff9247
+.qingyou-button
+  background-image linear-gradient(135deg, #ffc47d, #ff9247)
+  padding 0.7rem 1.4rem
+  border-radius 10rem
+  box-shadow 0 8px 20px 0 #efe8e1
+  cursor pointer
+  margin-left 1.4rem
+  span
+    color #fff
+    font-size 0.9rem
+    font-weight 700
+.qingyou-button:hover
+  background #ffc47d
+.qingyou-footer
+  padding 2rem 8rem
+  background #faf8f5
+  display flex
+  flex-direction row
+  user-select text
+  flex-wrap wrap
+  .footer-column
+    display flex
+    flex-direction column
+    margin-right 8rem
+    .footer-title
+      width auto
+      font-size 1.2rem
+      color #333
+      margin-bottom 2rem
+      font-weight 600
+      white-space nowrap
+    .footer-item
+      display flex
+      flex-direction row
+      justify-content flex-start
+      margin-bottom 1rem
+      white-space nowrap
+      img
+        width 1.2rem
+        height 1.2rem
+        margin-right 0.4rem
+      span, a
+        font-size 1rem
+        color #333
+        padding 0 0.2rem
+        transition all 0.2s ease-in-out 0s
+      span:hover, a:hover
+        color #fff
+        background #333
+        transition all 0.2s ease-in-out 0s
+// 
+// 版权部分
+// 
+.copyright-inf
+  text-align center
+  background #faf8f5
+  width 100%
+  p
+    font-size 0.6rem
+    padding 0.6rem
+@keyframes wave-move
+  from
+    transform translateX(0)
+  to
+    transform translateX(-300vw)
+@keyframes rotate1
+  from
+    transform rotate(0deg)
+  to
+    transform rotate(359deg)
+@keyframes rotate2
+  from
+    transform rotate(0deg)
+  to
+    transform rotate(-359deg)
+@font-face
+  font-family 'AvertaStd'
+  src url('../font/AvertaStd-Regular.ttf')
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px)
+  .header-about
+    display none !important
+  .qingyou-banner
+    .banner-title
+      span
+        font-size 2rem !important
+      p
+        font-size 1rem !important
+  .guide-content-container
+    div
+      font-size 1rem !important
+    span
+      font-size 0.8rem !important
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px)
+  .qingyou-card-container
+    .qingyou-sourcecard
+      .card-header
+        .card-text
+          font-size 1rem !important
+          img
+            display none !important
+      .card-content
+        .card-mask
+          padding 0.8rem !important
+          span
+            font-size 0.8rem !important
+  .img-arrow
+    margin 0 1.2rem !important
+// Medium devices (tablets, less than 992px)
+// @media (max-width: 991.98px)
+@media (max-width: 1056px)
+  .qingyou-card-container
+    flex-wrap wrap
+    .qingyou-sourcecard
+      width 30vw !important
+      height 30vh !important
+  .qingyou-source
+    flex-direction column !important
+    align-items center !important
+    pre
+      margin-top 80px
+      width 100% !important
+  .qingyou-img-container
+    .img-cut
+      height 20vh !important
+  .qingyou-guide
+    .guide-label-container
+      transform rotate(90deg) scale(0.6,0.6) !important
+      top 3rem !important
+      right 0
+      width 2.6rem !important
+      height auto !important
+    .guide-content-container
+      padding 2rem !important
+      width calc(100% - 2.6rem) !important
+      height 100% !important
