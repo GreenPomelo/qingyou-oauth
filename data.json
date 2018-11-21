@@ -3,16 +3,16 @@
     "errMsg": null,
     "errCode": null,
     "data": {
-        "username": "赵明睿",
-        "nick": "Solomon",
+        "username": "肖晨旭",
+        "nick": "青柚",
         "avatar": "https://wx.qlogo.cn/mmopen/vi_32/y2smdnib7JELX7BbzCYQD07zZ6IiamJc5K9rdoxTG6ht0eZJr7iaQ07U28D7uib3zX9qEoykAenWuUardInJGEYd7A/0",
         "gender": 1,
-        "phoneNumber": "18168058997",
-        "studentId": "B16090717",
+        "phoneNumber": "2092313702",
+        "studentId": "B17000000",
         "password": "njupt great again",
-        "clazz": "B160907",
+        "clazz": "B170000",
         "cardId": "110020160293300",
-        "major": "测绘工程",
+        "major": "青柚",
         "courses": {
             "timetable": [{
                     "day": 1,
