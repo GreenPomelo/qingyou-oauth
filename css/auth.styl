@@ -18,7 +18,7 @@ body
   overflow-x hidden
   display flex
   align-items center
-  background-image url('../img/index_img/qx.jpg')
+  background-image url('/img/qx.jpg')
   background-size cover
   .card-container
     width 25vw
@@ -56,10 +56,15 @@ body
         color #ff9247
     .auth-button
       background-image linear-gradient(135deg, #ffc47d, #ff9247)
-      padding 0.7rem 1.4rem
+      height 3rem
+      width 7rem
       border-radius 10rem
       box-shadow 0 8px 20px 0 #efe8e1
-      cursor pointer
+      outline none
+      border none
+      display flex
+      align-items center
+      justify-content center
       span
         color #fff
         font-size 0.9rem
@@ -76,7 +81,7 @@ body
     color #878787
 @font-face
   font-family 'AvertaStd'
-  src url('../font/AvertaStd-Regular.ttf')
+  src url('/font/AvertaStd-Regular.ttf')
 @media (max-width: 1056px)
   body
     justify-content center

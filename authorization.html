@@ -1,31 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="favicon.ico">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>小程序授权页面</title>
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAClUlEQVQ4T32TS0xTURCGZ869vRRuAYupLExLBIHeFqJCLwtNfGyMEtIWTRoXutH42BhxaeJSl+6MWzViokRDHxgWGJWYYKGABmxpUcA0Gh9QBKTp4952DJpWSpGzOycz3/nnnxmELY5k6z3Da7RdmYzSxDhuVk2lT4fHO8fWp2BxPuHuVnetwPhzgk68bLLs0wmlIqwuLcCXqYlYOpU6EBl1RHJ5BQCz7D3EabgnjLBCEEWlplkWeUHI/xFfWoTo5NjbyaHjLcWAwy95azL+bUdtw3aDsRaS8VXIKGnQ6iqA4/k8JDjYnwj6E+UArszaY16B1Opr0VaIL+rbDlZ+n52GX7EfoNMbYGX+K+h3GsFgqgNVUWB66Hnivb9DBEAqAKzJLxF1vgpDdXksOgOGmnpgHAdEAIuf5/7A1HRSTSyv3J30H7tQVILJ9FAvVosxQJYCIgFwg79EKiBxC3PpbfPzrtViQHOfvkyrToQDTuP/OmuR3dE0E5o+DrevFACs1h6dWia8RoDmcMDJm23ek+FR+9NcUO5ukd0KIfpYPHUqGHSl8x6YZc95IDiKSJ3KT0EUqpQHoRGHKwewyJ7uWEp7saoksUwAjwHYQDhgv7cecAIQbiGRcSrg/NezDbVIslsFwjeEeD0csA+u6wKh1OK7goxuhEYdOsnm7WKJ5J2cTIvNc1Yl5uUx+ymDcCkScHQXmdjY6CnnKikUGnEaJdn9iBD7wyOO+7tbe+s0HBtQFjWSoE9/2NTEv7QeTmoTZhiRE/jSaDaTuo1EdQSYQIKriFlaMzBUVrkLXh1RN92FhjbfHg6yzxhlO4KBzne5IKvcuzeLrC+rQntk3DGx5TaaZfd+BLgJBZNEBIxdmxq2+zfOyG8fyA8gnwyyXgAAAABJRU5ErkJggg==" type="img/x-ico" />
     <link rel="stylesheet" href="./css/auth.css">
-    <title>青柚授权</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet" type="text/css" media="screen" href="main.css" />-->
+    <!--<script src="main.js"></script>-->
 </head>
-
 <body>
+    <!-- 你将授权
+    <div th:text="${groups}"></div>
+    使用你的小程序
+    <div th:text="${scope}"></div>
+    信息。
+    <form action="/authorize" method="POST">
+        <input name="username">
+        <br>
+        <input name="password" type="password">
+        <br>
+        <button type="submit" >确认并授权</button>
+    </form> -->
     <div class="card-container">
         <div class="card-title">青柚第三方授权</div>
-        <div class="input-container">
-            <input type="text" class="phoneNumber" placeholder="手机号码">
-            <input type="text" class="password" placeholder="密码">
-        </div>
+        <form action="/authorize" method="POST" class="input-container">
+            <input type="text" class="phoneNumber" name="username" placeholder="手机号码">
+            <input type="password" class="password" name="password" placeholder="密码">
+        </form>
         <div class="card-detail">
-            <p>你将授权<span>Solomon</span>使用你小程序的</p>
-            <p>一卡通卡号、课程表、以及用户个人基本信息。</p>
+            <p>你将授权<span th:text="${groups}"></span>使用你小程序的</p>
+            <div th:text="${scope}"></div>信息。
         </div>
-        <div class="auth-button"><span>确认并授权</span></div>
+        <button class="auth-button" type="submit"><span>确认并授权</span></button>
     </div>
     <div class="copyright-inf">
-        <p>Copyright &copy;2018 青柚工作室 qingyou.com</p>
+        <p>Copyright &copy;2018 青柚工作室 qingyou@njupt.edu.cn</p>
     </div>
 </body>
-
 </html>
